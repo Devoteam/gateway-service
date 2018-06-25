@@ -9,7 +9,11 @@ spring:
         uri: lb://company-service
         predicates:
         - Path=/companies/**
+        filters:
+        - AddResponseHeader=Access-Control-Allow-Origin, *
       - id: car-service
         uri: lb://car-service
         predicates:
         - Path=/cars/**
+        filters:
+        - AddResponseHeader=Access-Control-Allow-Origin, *

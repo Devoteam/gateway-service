@@ -5,14 +5,14 @@ spring:
         locator:
           enabled: true
       routes:
-      - id: company-service
-        uri: lb://company-service
+      - id: company
+        uri: lb://company
         predicates:
         - Path=/companies/**
         filters:
         - AddResponseHeader=Access-Control-Allow-Origin, *
-      - id: car-service
-        uri: lb://car-service
+      - id: car
+        uri: lb://car
         predicates:
         - Path=/cars/**
         filters:

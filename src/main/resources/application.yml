@@ -12,7 +12,7 @@ spring:
         filters:
         - AddResponseHeader=Access-Control-Allow-Origin, *
       - id: car
-        uri: lb://car
+        uri: http://car:8080
         predicates:
         - Path=/cars/**
         filters:
